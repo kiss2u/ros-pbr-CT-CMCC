@@ -15,7 +15,7 @@ curl https://bgp.space/cernet_cidr.html > /tmp/pbr/cernet.txt && sed -i '1,/BEGI
 #长城宽带/鹏博士
 curl https://bgp.space/gwbn_cidr.html > /tmp/pbr/gwbn.txt && sed -i '1,/BEGIN/d' /tmp/pbr/gwbn.txt && sed -i '/END/,$d' /tmp/pbr/gwbn.txt && sed -i 's/<br>//g' /tmp/pbr/gwbn.txt
 #国内其他
-curl https://bgp.space/othernet.html > /tmp/pbr/othernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/othernet.txt && sed -i '/END/,$d' /tmp/pbr/othernet.txt && sed -i 's/<br>//g' /tmp/pbr/othernet.txt
+curl https://bgp.space/othernet_cidr.html > /tmp/pbr/othernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/othernet.txt && sed -i '/END/,$d' /tmp/pbr/othernet.txt && sed -i 's/<br>//g' /tmp/pbr/othernet.txt
 
 {
 echo "/ip route rule"
