@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir -p /tmp/pbr
+
 #电信
 curl https://bgp.space/chinatelecom_cidr.html > /tmp/pbr/ct.txt && sed -i '1,/BEGIN/d' /tmp/pbr/ct.txt && sed -i '/END/,$d' /tmp/pbr/ct.txt && sed -i 's/<br>//g' /tmp/pbr/ct.txt
 #联通
@@ -44,6 +45,15 @@ for net in $nets ; do
   echo "add dst-address=$net action=lookup table=CT"
 done
 
+nets=`cat /tmp/pbr/gwbn.txt`
+for net in $nets ; do
+  echo "add dst-address=$net action=lookup table=CT"
+done
+
+nets=`cat /tmp/pbr/othernet.txt`
+for net in $nets ; do
+  echo "add dst-address=$net action=lookup table=CT"
+done
 } > /home/wwwroot/@jacyl4_fr/github/ros-pbr-CT-CMCC/ros-pbr-CT-CMCC.rsc 
 
 
@@ -74,7 +84,6 @@ nets=`cat /tmp/pbr/cernet.txt`
 for net in $nets ; do
   echo "add list=dpbr-CT address=$net"
 done
-
 } > /home/wwwroot/@jacyl4_fr/github/ros-pbr-CT-CMCC/ros-dpbr-CT-CMCC.rsc 
 
 rm -rf /tmp/pbr
