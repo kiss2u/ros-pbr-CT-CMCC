@@ -4,7 +4,7 @@ ip段信息取自 https://bgp.space/
 
 每日凌晨2点自动更新于此（如有更新）。
 
-ros-pbr-CT-CMCC.rsc 是往route - rules 里生ip段列表。
+**ros-pbr-CT-CMCC.rsc** 是往route - rules 里生ip段列表。
 
 ros script 例子
 
@@ -24,6 +24,6 @@ ros script 例子
 ```
 
 
-ros-dpbr-CT-CMCC.rsc 是往Firewall - address lists 里生ip段列表。
+**ros-dpbr-CT-CMCC.rsc** 是往Firewall - address lists 里生ip段列表。
 
 这个可以用于Firewall - mangle页，通过dst-addrss= 引用
