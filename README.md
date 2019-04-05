@@ -2,13 +2,11 @@
 
 ip段信息取自 https://bgp.space/
 
-仅 ros-pbr-CT-CMCC.rsc 这一个文件是给ros用的。
+ros-pbr-CT-CMCC.rsc 是往route - rules 里生ip段列表。
 
 每日凌晨2点自动更新于此（如有更新）。
 
-
 ros script 例子
-
 
 ```
 /file remove [find name="ros-pbr-CT-CMCC.rsc"]
@@ -24,3 +22,7 @@ ros script 例子
 /tool fetch url="https://raw.githubusercontent.com/jacyl4/ros-pbr-CT-CMCC/master/ros-pbr-CT-CMCC.rsc"
 /import ros-pbr-CT-CMCC.rsc
 ```
+
+
+ros-dpbr-CT-CMCC.rsc 是往Firewall - address lists 里生ip段列表。
+这个可以用于mangle页，通过dst-addrss= 引用
