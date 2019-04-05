@@ -84,6 +84,16 @@ nets=`cat /tmp/pbr/cernet.txt`
 for net in $nets ; do
   echo "add list=dpbr-CT address=$net"
 done
+
+nets=`cat /tmp/pbr/gwbn.txt`
+for net in $nets ; do
+  echo "add list=dpbr-CT address=$net"
+done
+
+nets=`cat /tmp/pbr/othernet.txt`
+for net in $nets ; do
+  echo "add list=dpbr-CT address=$net"
+done
 } > /home/wwwroot/@jacyl4_fr/github/ros-pbr-CT-CMCC/ros-dpbr-CT-CMCC.rsc 
 
 rm -rf /tmp/pbr
