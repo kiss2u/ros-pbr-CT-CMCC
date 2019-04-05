@@ -2,19 +2,19 @@
 
 mkdir -p /tmp/pbr
 #电信
-curl https://bgp.space/chinatelecom_cidr.html > /tmp/pbr/ct.txt && sed -i '1,/BEGIN/d' /tmp/pbr/ct.txt && sed -i '/END/,$d' /tmp/pbr/ct.txt && sed -i 's/<br>//g' /tmp/pbr/ct.txt
+curl https://bgp.space/chinatelecom.html > /tmp/pbr/ct.txt && sed -i '1,/BEGIN/d' /tmp/pbr/ct.txt && sed -i '/END/,$d' /tmp/pbr/ct.txt && sed -i 's/<br>//g' /tmp/pbr/ct.txt
 #联通
-curl https://bgp.space/unicom_cnc_cidr.html > /tmp/pbr/cnc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cnc.txt && sed -i '/END/,$d' /tmp/pbr/cnc.txt && sed -i 's/<br>//g' /tmp/pbr/cnc.txt
+curl https://bgp.space/unicom_cnc.html > /tmp/pbr/cnc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cnc.txt && sed -i '/END/,$d' /tmp/pbr/cnc.txt && sed -i 's/<br>//g' /tmp/pbr/cnc.txt
 #移动
-curl https://bgp.space/cmcc_cidr.html > /tmp/pbr/cmcc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cmcc.txt && sed -i '/END/,$d' /tmp/pbr/cmcc.txt && sed -i 's/<br>//g' /tmp/pbr/cmcc.txt
+curl https://bgp.space/cmcc.html > /tmp/pbr/cmcc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cmcc.txt && sed -i '/END/,$d' /tmp/pbr/cmcc.txt && sed -i 's/<br>//g' /tmp/pbr/cmcc.txt
 #铁通
-curl https://bgp.space/crtc_cidr.html > /tmp/pbr/crtc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/crtc.txt && sed -i '/END/,$d' /tmp/pbr/crtc.txt && sed -i 's/<br>//g' /tmp/pbr/crtc.txt
+curl https://bgp.space/crtc.html > /tmp/pbr/crtc.txt && sed -i '1,/BEGIN/d' /tmp/pbr/crtc.txt && sed -i '/END/,$d' /tmp/pbr/crtc.txt && sed -i 's/<br>//g' /tmp/pbr/crtc.txt
 #教育网
-curl https://bgp.space/cernet_cidr.html > /tmp/pbr/cernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cernet.txt && sed -i '/END/,$d' /tmp/pbr/cernet.txt && sed -i 's/<br>//g' /tmp/pbr/cernet.txt
+curl https://bgp.space/cernet.html > /tmp/pbr/cernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/cernet.txt && sed -i '/END/,$d' /tmp/pbr/cernet.txt && sed -i 's/<br>//g' /tmp/pbr/cernet.txt
 #长城宽带/鹏博士
-curl https://bgp.space/gwbn_cidr.html > /tmp/pbr/gwbn.txt && sed -i '1,/BEGIN/d' /tmp/pbr/gwbn.txt && sed -i '/END/,$d' /tmp/pbr/gwbn.txt && sed -i 's/<br>//g' /tmp/pbr/gwbn.txt
+curl https://bgp.space/gwbn.html > /tmp/pbr/gwbn.txt && sed -i '1,/BEGIN/d' /tmp/pbr/gwbn.txt && sed -i '/END/,$d' /tmp/pbr/gwbn.txt && sed -i 's/<br>//g' /tmp/pbr/gwbn.txt
 #国内其他
-curl https://bgp.space/othernet_cidr.html > /tmp/pbr/othernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/othernet.txt && sed -i '/END/,$d' /tmp/pbr/othernet.txt && sed -i 's/<br>//g' /tmp/pbr/othernet.txt
+curl https://bgp.space/othernet.html > /tmp/pbr/othernet.txt && sed -i '1,/BEGIN/d' /tmp/pbr/othernet.txt && sed -i '/END/,$d' /tmp/pbr/othernet.txt && sed -i 's/<br>//g' /tmp/pbr/othernet.txt
 
 {
 echo "/ip route rule"
